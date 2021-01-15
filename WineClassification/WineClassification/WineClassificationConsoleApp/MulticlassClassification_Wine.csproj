@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp5.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="datasets\**" />
+    <EmbeddedResource Remove="datasets\**" />
+    <None Remove="datasets\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\Data\wine-test.txt" Link="Data\wine-test.txt" />
+    <Content Include="..\Data\wine-train.txt" Link="Data\wine-train.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="1.5.4" />
+  </ItemGroup>
+
+  
+
+</Project>
